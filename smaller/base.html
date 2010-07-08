@@ -16,7 +16,7 @@
             var a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', br = '<div class="clr"/>';
             $(document).ready(function(){
                 //START
-                
+				for(n=0;n<26;n++){$('#a').append('<b>'+a[n]+'</b>')};console.log($('#a b:nth-child(10n+10)').append("<br>"));
                 //END
             });
         </script>
@@ -41,7 +41,7 @@
         display each character in a div on the page, and start a new <br/>
         row of letters every ten characters.</p>
         <p>In action: <a href="http://screencast.com/t/NTQ3ZTMxYT">http://screencast.com/t/NTQ3ZTMxYT</a></p>
-        <div class='alphabet'>
+        <div class='alphabet' id="a">
             
         </div>
 	</body>
