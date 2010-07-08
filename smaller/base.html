@@ -16,7 +16,7 @@
             var a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', br = '<div class="clr"/>';
             $(document).ready(function(){
                 //START
-for(n=0;n<26;n++){$('#a').append('<div>'+a[n]+'</div>')};$('#a b:nth-child(10n+10)').append("<br>");
+for(n=0;n<26;n++){$('#a').append('<div>'+a.charAt(n))};$('#a div:nth-child(10n+10)').after(br);
                 //END
             });
         </script>
