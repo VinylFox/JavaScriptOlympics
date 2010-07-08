@@ -16,7 +16,7 @@
             var a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', br = '<div class="clr"/>';
             $(document).ready(function(){
                 //START
-for(n=0;n<26;n++){$('#a').append('<div>'+a.charAt(n))};$('#a div:nth-child(10n+10)').after(br);
+for(n=0;n<26;n++){e=$('#a').append('<div>'+a.charAt(n-1));if(n%10<1){e.append(br)}};
                 //END
             });
         </script>
@@ -31,8 +31,10 @@ for(n=0;n<26;n++){$('#a').append('<div>'+a.charAt(n))};$('#a div:nth-child(10n+1
                 height: 30px;
             }
             div.clr {
-                clear: both !important;
-                width: 0px;
+                clear: left;
+				float: none;
+				width: auto;
+				height: auto;
             }
         </style>
 	</head>
