@@ -18,9 +18,10 @@
             $(document).ready(function(){
                 var c = new Date(), d = 5, p = '<p>', m = document.getElementById('m');
                 //START
-while(d){$('#m').prepend(p+c.getFullYear()+"-"+(c.getMonth()+1)+"-"+c.getDate());d--;c.setDate(c.getDate()-1);}
+while(d--){$('#m').prepend(p+c.getFullYear()+"-"+(c.getMonth()+1)+"-"+c.getDate());c.setDate(c.getDate()-1);}
 
      //END
+
             });
         </script>
 	</head>
