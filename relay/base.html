@@ -9,6 +9,8 @@
         <script>
             $(document).ready(function(){
                 //START
+			
+				// CHALLENGE 1
 				function blinker(element,rate){
 					if($(element).css('visibility') == 'visible') {
 						$(element).css('visibility', 'hidden')
@@ -23,11 +25,14 @@
 					setInterval(function(){ blinker(self, rate)}, rate);
 				});
 				
+				
+				// CHALLENGE 2
 				$('blink').css('text-decoration','none');
 				
+				
+				//CHALLENGE 3
 				function hamsterdance() {
-					$('img:first').toggle();
-					$('img:last').toggle();					
+					$('img').toggle();
 				}
 				$('img:last').hide();	
 				setInterval(hamsterdance,100);
