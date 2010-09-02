@@ -9,7 +9,33 @@
         <script>
             $(document).ready(function(){
                 //START
-                
+				function blinker(element,rate){
+//					console.log('2 '+rate);
+					$(element).fadeOut(rate,function(){});
+					$(element).fadeIn(rate,function(){})
+				}
+
+                $('.blink').each(function(index){
+					var rate=$(this).attr('rate');
+					console.log(rate);
+//                $.each($('.blink'), function(i,val){
+//					debugger;
+//					console.log($(this).attr('rate'));
+//setInterval( function() { funca(10,3); }, 500 );
+					self = this;
+					setInterval(function(){ blinker(self, rate)}, rate);
+//					startBlinker()
+				});
+				
+				$('blink').css('text-decoration','none');
+				
+				function hamsterdance() {
+					$('img:first').toggle();
+					$('img:last').toggle();					
+				}
+				$('img:last').hide();	
+				setInterval(hamsterdance,100);
+			
                 //END
             });
         </script>
@@ -23,6 +49,8 @@
   }
 	</style>
 	<body>
+
+
 	    <p>Your time machine has taken you back to 1994. But there's a strange development in this alternate dimension - the browser makers
 	      forgot to implement the blink tag and animated gifs! You are poised to make millions in the pre-dot-com-boom! All you have to do is implement
 	      some sweet pre-web-2.0 effects in FireFox 3.x and any library you want (or not).</p>
