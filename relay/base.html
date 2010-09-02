@@ -10,21 +10,17 @@
             $(document).ready(function(){
                 //START
 				function blinker(element,rate){
-//					console.log('2 '+rate);
-					$(element).fadeOut(rate,function(){});
-					$(element).fadeIn(rate,function(){})
+					if($(element).css('visibility') == 'visible') {
+						$(element).css('visibility', 'hidden')
+					} else {
+						$(element).css('visibility', 'visible')						
+					}
 				}
 
                 $('.blink').each(function(index){
 					var rate=$(this).attr('rate');
-					console.log(rate);
-//                $.each($('.blink'), function(i,val){
-//					debugger;
-//					console.log($(this).attr('rate'));
-//setInterval( function() { funca(10,3); }, 500 );
 					self = this;
 					setInterval(function(){ blinker(self, rate)}, rate);
-//					startBlinker()
 				});
 				
 				$('blink').css('text-decoration','none');
