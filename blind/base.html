@@ -16,7 +16,17 @@
              * In action: http://screencast.com/t/ZDYwZGYyZ
              */
             $(document).ready(function(){
-                
+                jQuery('input:button').bind('click',function() { 
+					appendText = "";
+
+					if(jQuery('input:checkbox').attr('checked') == true) {
+						appendText = "<li>"+jQuery('input').val().toUpperCase()+"</li>";
+
+					} else {
+						appendText = "<li>"+jQuery('input').val()+"</li>"
+					}
+					jQuery('ul').append(appendText);
+				});
                 
                 
             });
